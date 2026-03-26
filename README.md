@@ -90,7 +90,7 @@ La aplicación transforma el repaso técnico tradicional en una experiencia inte
 
 ### Desarrollo
 
-*   **Desarrollador**: \[Tu Nombre\]
+*   **Desarrollador**: Carvajal Fernanda
     
 *   **Institución**: Universidad Tecnológica de Nayarit
     
@@ -98,7 +98,7 @@ La aplicación transforma el repaso técnico tradicional en una experiencia inte
     
 *   **Empresa**: Tata Consultancy Services (TCS) México
     
-*   **Periodo de Estadía**: \[Mes/Año - Mes/Año\]
+*   **Periodo de Estadía**: \[01/2026 - 04/2026\]
     
 
 📄 **Licencia**
