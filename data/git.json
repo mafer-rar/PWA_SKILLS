@@ -1,0 +1,144 @@
+{
+  "git": [
+    {
+      "id": 1,
+      "question": "¿Cuál es el comando para crear una rama en Git?",
+      "options": [
+        {"id": "A", "text": "git branch nombre-rama"},
+        {"id": "B", "text": "git checkout -b nombre-rama"},
+        {"id": "C", "text": "git new-branch nombre-rama"},
+        {"id": "D", "text": "Ambas A y B son correctas"}
+      ],
+      "correctAnswer": "D",
+      "explanation": "Tanto 'git branch' como 'git checkout -b' crean una nueva rama. La primera solo la crea, la segunda la crea y cambia a ella.",
+      "category": "git",
+      "difficulty": "basic"
+    },
+    {
+      "id": 2,
+      "question": "¿Qué comando se usa para guardar cambios en el historial de Git?",
+      "options": [
+        {"id": "A", "text": "git save"},
+        {"id": "B", "text": "git commit -m 'mensaje'"},
+        {"id": "C", "text": "git push"},
+        {"id": "D", "text": "git store"}
+      ],
+      "correctAnswer": "B",
+      "explanation": "El comando 'git commit' registra los cambios en el repositorio local con un mensaje descriptivo.",
+      "category": "git",
+      "difficulty": "basic"
+    },
+    {
+      "id": 3,
+      "question": "¿Cuál comando descarga cambios del repositorio remoto sin fusionarlos?",
+      "options": [
+        {"id": "A", "text": "git pull"},
+        {"id": "B", "text": "git fetch"},
+        {"id": "C", "text": "git download"},
+        {"id": "D", "text": "git get"}
+      ],
+      "correctAnswer": "B",
+      "explanation": "'git fetch' descarga los cambios pero no los fusiona. 'git pull' hace fetch + merge automáticamente.",
+      "category": "git",
+      "difficulty": "intermediate"
+    },
+    {
+      "id": 4,
+      "question": "¿Qué comando muestra el historial de commits?",
+      "options": [
+        {"id": "A", "text": "git history"},
+        {"id": "B", "text": "git log"},
+        {"id": "C", "text": "git show"},
+        {"id": "D", "text": "git list"}
+      ],
+      "correctAnswer": "B",
+      "explanation": "'git log' muestra el historial completo de commits con autor, fecha y mensaje.",
+      "category": "git",
+      "difficulty": "basic"
+    },
+    {
+      "id": 5,
+      "question": "¿Qué comando sube los cambios locales al repositorio remoto?",
+      "options": [
+        {"id": "A", "text": "git upload"},
+        {"id": "B", "text": "git send"},
+        {"id": "C", "text": "git push"},
+        {"id": "D", "text": "git commit"}
+      ],
+      "correctAnswer": "C",
+      "explanation": "'git push' envía los commits locales al repositorio remoto (GitHub, GitLab, etc.).",
+      "category": "git",
+      "difficulty": "basic"
+    },
+    {
+      "id": 6,
+      "question": "¿Qué comando permite ver el estado actual del repositorio?",
+      "options": [
+        {"id": "A", "text": "git check"},
+        {"id": "B", "text": "git status"},
+        {"id": "C", "text": "git info"},
+        {"id": "D", "text": "git state"}
+      ],
+      "correctAnswer": "B",
+      "explanation": "'git status' muestra archivos modificados, en staging y sin trackear.",
+      "category": "git",
+      "difficulty": "basic"
+    },
+    {
+      "id": 7,
+      "question": "¿Qué comando añade archivos al área de staging?",
+      "options": [
+        {"id": "A", "text": "git stage <archivo>"},
+        {"id": "B", "text": "git add <archivo>"},
+        {"id": "C", "text": "Ambas A y B son correctas"},
+        {"id": "D", "text": "git commit <archivo>"}
+      ],
+      "correctAnswer": "C",
+      "explanation": "Tanto 'git add' como 'git stage' son comandos equivalentes para añadir archivos al staging.",
+      "category": "git",
+      "difficulty": "intermediate"
+    },
+    {
+      "id": 8,
+      "question": "¿Qué comando permite fusionar una rama con la rama actual?",
+      "options": [
+        {"id": "A", "text": "git join"},
+        {"id": "B", "text": "git merge <rama>"},
+        {"id": "C", "text": "git combine"},
+        {"id": "D", "text": "git connect"}
+      ],
+      "correctAnswer": "B",
+      "explanation": "'git merge' integra los cambios de una rama específica en la rama actual.",
+      "category": "git",
+      "difficulty": "intermediate"
+    },
+    {
+      "id": 9,
+      "question": "¿Qué comando permite deshacer cambios no commiteados?",
+      "options": [
+        {"id": "A", "text": "git undo"},
+        {"id": "B", "text": "git revert"},
+        {"id": "C", "text": "git checkout -- <archivo>"},
+        {"id": "D", "text": "git reset --hard"}
+      ],
+      "correctAnswer": "C",
+      "explanation": "'git checkout -- <archivo>' descarta cambios locales no commiteados en ese archivo.",
+      "category": "git",
+      "difficulty": "intermediate"
+    },
+    {
+      "id": 10,
+      "question": "¿Qué archivo se usa para excluir archivos del control de versiones?",
+      "options": [
+        {"id": "A", "text": ".gitignore"},
+        {"id": "B", "text": ".gitexclude"},
+        {"id": "C", "text": ".gitconfig"},
+        {"id": "D", "text": ".gitexclude"}
+      ],
+      "correctAnswer": "A",
+      "explanation": "'.gitignore' contiene patrones de archivos que Git debe ignorar (node_modules, .env, etc.).",
+      "category": "git",
+      "difficulty": "basic"
+    }
+  ]
+}

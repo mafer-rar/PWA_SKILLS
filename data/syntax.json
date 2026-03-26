@@ -1,0 +1,144 @@
+{
+  "syntax": [
+    {
+      "id": 1,
+      "question": "¿Qué etiqueta HTML se usa para crear un enlace?",
+      "options": [
+        {"id": "A", "text": "< link >"},
+        {"id": "B", "text": "< a >"},
+        {"id": "C", "text": "< href >"},
+        {"id": "D", "text": "< url >"}
+      ],
+      "correctAnswer": "B",
+      "explanation": "La etiqueta <a> (anchor) crea hipervínculos. El atributo href define la URL de destino.",
+      "category": "syntax",
+      "difficulty": "basic"
+    },
+    {
+      "id": 2,
+      "question": "¿Qué propiedad CSS cambia el color del texto?",
+      "options": [
+        {"id": "A", "text": "background-color"},
+        {"id": "B", "text": "text-color"},
+        {"id": "C", "text": "color"},
+        {"id": "D", "text": "font-color"}
+      ],
+      "correctAnswer": "C",
+      "explanation": "La propiedad 'color' en CSS define el color del texto. 'background-color' es para el fondo.",
+      "category": "syntax",
+      "difficulty": "basic"
+    },
+    {
+      "id": 3,
+      "question": "¿Cómo se declara una variable en JavaScript moderno (ES6+)?",
+      "options": [
+        {"id": "A", "text": "variable miVar"},
+        {"id": "B", "text": "var miVar"},
+        {"id": "C", "text": "let miVar o const miVar"},
+        {"id": "D", "text": "Ambas B y C son correctas"}
+      ],
+      "correctAnswer": "D",
+      "explanation": "'var' es la forma antigua. 'let' y 'const' son las formas modernas de ES6+ para declarar variables.",
+      "category": "syntax",
+      "difficulty": "basic"
+    },
+    {
+      "id": 4,
+      "question": "¿Qué etiqueta HTML define una lista desordenada?",
+      "options": [
+        {"id": "A", "text": "< ol >"},
+        {"id": "B", "text": "< ul >"},
+        {"id": "C", "text": "< li >"},
+        {"id": "D", "text": "< list >"}
+      ],
+      "correctAnswer": "B",
+      "explanation": "<ul> (unordered list) crea listas con viñetas. <ol> es para listas ordenadas con números.",
+      "category": "syntax",
+      "difficulty": "basic"
+    },
+    {
+      "id": 5,
+      "question": "¿Qué selector CSS selecciona un elemento por su ID?",
+      "options": [
+        {"id": "A", "text": ".nombre"},
+        {"id": "B", "text": "#nombre"},
+        {"id": "C", "text": "@nombre"},
+        {"id": "D", "text": "*nombre"}
+      ],
+      "correctAnswer": "B",
+      "explanation": "El símbolo '#' selecciona por ID. El punto '.' selecciona por clase.",
+      "category": "syntax",
+      "difficulty": "basic"
+    },
+    {
+      "id": 6,
+      "question": "¿Qué método de JavaScript muestra un mensaje en la consola?",
+      "options": [
+        {"id": "A", "text": "print()"},
+        {"id": "B", "text": "console.log()"},
+        {"id": "C", "text": "alert()"},
+        {"id": "D", "text": "echo()"}
+      ],
+      "correctAnswer": "B",
+      "explanation": "'console.log()' imprime mensajes en la consola del navegador para depuración.",
+      "category": "syntax",
+      "difficulty": "basic"
+    },
+    {
+      "id": 7,
+      "question": "¿Qué etiqueta HTML se usa para incluir JavaScript externo?",
+      "options": [
+        {"id": "A", "text": "< javascript >"},
+        {"id": "B", "text": "< script src='archivo.js' >"},
+        {"id": "C", "text": "< js>"},
+        {"id": "D", "text": "< link js='archivo.js' >"}
+      ],
+      "correctAnswer": "B",
+      "explanation": "La etiqueta <script> con el atributo 'src' permite cargar archivos JavaScript externos.",
+      "category": "syntax",
+      "difficulty": "basic"
+    },
+    {
+      "id": 8,
+      "question": "¿Qué propiedad CSS controla el espacio entre el contenido y el borde?",
+      "options": [
+        {"id": "A", "text": "margin"},
+        {"id": "B", "text": "border"},
+        {"id": "C", "text": "padding"},
+        {"id": "D", "text": "spacing"}
+      ],
+      "correctAnswer": "C",
+      "explanation": "'padding' es el espacio interior entre contenido y borde. 'margin' es el espacio exterior.",
+      "category": "syntax",
+      "difficulty": "intermediate"
+    },
+    {
+      "id": 9,
+      "question": "¿Cómo se define una función flecha (arrow function) en JavaScript?",
+      "options": [
+        {"id": "A", "text": "function => ()"},
+        {"id": "B", "text": "() => {}"},
+        {"id": "C", "text": "arrow function()"},
+        {"id": "D", "text": "func => ()"}
+      ],
+      "correctAnswer": "B",
+      "explanation": "La sintaxis de arrow function es: (parametros) => { cuerpo }. Es más concisa que function tradicional.",
+      "category": "syntax",
+      "difficulty": "intermediate"
+    },
+    {
+      "id": 10,
+      "question": "¿Qué etiqueta HTML crea un campo de entrada de texto?",
+      "options": [
+        {"id": "A", "text": "< textfield >"},
+        {"id": "B", "text": "< input type='text' >"},
+        {"id": "C", "text": "< textarea >"},
+        {"id": "D", "text": "< field >"}
+      ],
+      "correctAnswer": "B",
+      "explanation": "<input type='text'> crea un campo de una línea. <textarea> es para múltiples líneas.",
+      "category": "syntax",
+      "difficulty": "basic"
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "logic": [
+    {
+      "id": 1,
+      "question": "¿Qué estructura se usa para repetir un bloque de código mientras una condición sea verdadera?",
+      "options": [
+        {"id": "A", "text": "if-else"},
+        {"id": "B", "text": "switch"},
+        {"id": "C", "text": "while"},
+        {"id": "D", "text": "try-catch"}
+      ],
+      "correctAnswer": "C",
+      "explanation": "'while' ejecuta un bloque repetidamente mientras la condición evaluada sea verdadera.",
+      "category": "logic",
+      "difficulty": "basic"
+    },
+    {
+      "id": 2,
+      "question": "¿Qué operador lógico retorna verdadero solo si ambas condiciones son verdaderas?",
+      "options": [
+        {"id": "A", "text": "OR (||)"},
+        {"id": "B", "text": "AND (&&)"},
+        {"id": "C", "text": "NOT (!)"},
+        {"id": "D", "text": "XOR (^)"}
+      ],
+      "correctAnswer": "B",
+      "explanation": "El operador AND (&&) retorna true solo cuando ambas expresiones son verdaderas.",
+      "category": "logic",
+      "difficulty": "basic"
+    },
+    {
+      "id": 3,
+      "question": "¿Qué estructura es más eficiente para buscar un elemento en un array ordenado?",
+      "options": [
+        {"id": "A", "text": "Búsqueda lineal"},
+        {"id": "B", "text": "Búsqueda binaria"},
+        {"id": "C", "text": "Búsqueda aleatoria"},
+        {"id": "D", "text": "Todas son iguales"}
+      ],
+      "correctAnswer": "B",
+      "explanation": "La búsqueda binaria tiene complejidad O(log n) vs O(n) de la búsqueda lineal en arrays ordenados.",
+      "category": "logic",
+      "difficulty": "intermediate"
+    },
+    {
+      "id": 4,
+      "question": "¿Qué es un algoritmo?",
+      "options": [
+        {"id": "A", "text": "Un lenguaje de programación"},
+        {"id": "B", "text": "Una secuencia de pasos para resolver un problema"},
+        {"id": "C", "text": "Una base de datos"},
+        {"id": "D", "text": "Un tipo de variable"}
+      ],
+      "correctAnswer": "B",
+      "explanation": "Un algoritmo es un conjunto ordenado de instrucciones para resolver un problema específico.",
+      "category": "logic",
+      "difficulty": "basic"
+    },
+    {
+      "id": 5,
+      "question": "¿Qué estructura de datos sigue el principio LIFO (Last In, First Out)?",
+      "options": [
+        {"id": "A", "text": "Cola (Queue)"},
+        {"id": "B", "text": "Pila (Stack)"},
+        {"id": "C", "text": "Array"},
+        {"id": "D", "text": "Lista enlazada"}
+      ],
+      "correctAnswer": "B",
+      "explanation": "Una pila (stack) sigue LIFO: el último elemento en entrar es el primero en salir.",
+      "category": "logic",
+      "difficulty": "intermediate"
+    },
+    {
+      "id": 6,
+      "question": "¿Qué es la complejidad temporal de un algoritmo?",
+      "options": [
+        {"id": "A", "text": "El tiempo exacto en segundos que tarda"},
+        {"id": "B", "text": "Cómo crece el tiempo de ejecución con el tamaño de entrada"},
+        {"id": "C", "text": "El número de líneas de código"},
+        {"id": "D", "text": "La cantidad de memoria usada"}
+      ],
+      "correctAnswer": "B",
+      "explanation": "La complejidad temporal describe cómo escala el tiempo de ejecución según el tamaño de los datos de entrada.",
+      "category": "logic",
+      "difficulty": "intermediate"
+    },
+    {
+      "id": 7,
+      "question": "¿Qué estructura permite seleccionar entre múltiples opciones basadas en un valor?",
+      "options": [
+        {"id": "A", "text": "if-else"},
+        {"id": "B", "text": "for"},
+        {"id": "C", "text": "switch"},
+        {"id": "D", "text": "while"}
+      ],
+      "correctAnswer": "C",
+      "explanation": "'switch' evalúa una expresión y ejecuta el caso que coincide con su valor.",
+      "category": "logic",
+      "difficulty": "basic"
+    },
+    {
+      "id": 8,
+      "question": "¿Qué es un bucle infinito?",
+      "options": [
+        {"id": "A", "text": "Un bucle que nunca se ejecuta"},
+        {"id": "B", "text": "Un bucle cuya condición nunca se vuelve falsa"},
+        {"id": "C", "text": "Un bucle que se ejecuta una vez"},
+        {"id": "D", "text": "Un error de sintaxis"}
+      ],
+      "correctAnswer": "B",
+      "explanation": "Un bucle infinito ocurre cuando la condición de terminación nunca se cumple, ejecutándose indefinidamente.",
+      "category": "logic",
+      "difficulty": "basic"
+    },
+    {
+      "id": 9,
+      "question": "¿Qué patrón usa una función que se llama a sí misma?",
+      "options": [
+        {"id": "A", "text": "Iteración"},
+        {"id": "B", "text": "Recursión"},
+        {"id": "C", "text": "Herencia"},
+        {"id": "D", "text": "Polimorfismo"}
+      ],
+      "correctAnswer": "B",
+      "explanation": "La recursión es cuando una función se llama a sí misma hasta alcanzar un caso base.",
+      "category": "logic",
+      "difficulty": "intermediate"
+    },
+    {
+      "id": 10,
+      "question": "¿Qué estructura de datos permite acceso rápido por índice?",
+      "options": [
+        {"id": "A", "text": "Lista enlazada"},
+        {"id": "B", "text": "Array"},
+        {"id": "C", "text": "Pila"},
+        {"id": "D", "text": "Cola"}
+      ],
+      "correctAnswer": "B",
+      "explanation": "Los arrays permiten acceso directo O(1) a cualquier elemento mediante su índice.",
+      "category": "logic",
+      "difficulty": "basic"
+    }
+  ]
+}
