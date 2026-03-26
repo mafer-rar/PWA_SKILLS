@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCS Skills - PWA</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> <!-- Agrega Tailwind CSS desde CDN -->
+    <script src="js/app.js"></script> <!-- Archivo JavaScript para la lógica de la aplicación -->
+    <link rel="manifest" href="manifest.json"> <!-- Archivo de manifiesto para PWA -->
+</head>
+<body class="bg-white min-h-screen">
+   
+    <!-- PANTALLA 1: INICIO -->
+    <section id="home-screen" class="min-h-screen flex flex-col">
+
+        <!-- Header -->
+        <header class="bg-black text-white py-12 px-4 text-center">
+
+            <h1 class="text-4xl font-bold mb-2">TCS SKILLS</h1><br>
+            <p class="text-xl mb-6">¡Bienvenido, Practicante!</p>
+            <p class="text-gray-300">Selecciona un tema para comenzar a practicar</p>
+
+        </header>
+
+        <!-- Módulos -->
+        <main class="flex-1 flex items-center justify-center px-4 py-6">
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl">
+
+                <!-- Módulo 1: Control de Versiones -->
+                <div class="bg-white rounded-lg shadow-lg p-6 border border-gray-200 text-center h-85">
+
+                    <img src="assets/img/1.png" alt="Control de Versiones" class="w-28 h-28 mx-auto mb-4">
+                    <h2 class="text-2xl font-bold mb-2">Control de versiones</h2>
+                    <p class="text-gray-600 mb-6">Git, GitHub</p>
+                    
+                    <button onclick="startQuiz('git')" class="w-full py-3 border-b-2 border-black font-semibold hover:bg-gray-100 transition flex items-center justify-center">
+                        Iniciar Quiz
+                    </button>
+
+                </div>
+
+                <!-- Módulo 2: Lógica de Programación -->
+                <div class="bg-white rounded-lg shadow-lg p-6 border border-gray-200 text-center h-85">
+
+                    <img src="assets/img/2.png" alt="Lógica de Programación" class="w-28 h-28 mx-auto mb-4">
+                    <h2 class="text-2xl font-bold mb-2">Lógica de programación</h2>
+                    <p class="text-gray-600 mb-6">Algoritmos, Estructuras</p>
+
+                    <button onclick="startQuiz('logic')" class="w-full py-3 border-b-2 border-black font-semibold hover:bg-gray-100 transition flex items-center justify-center">
+                        Iniciar Quiz
+                    </button>
+
+                </div>
+
+                <!-- Módulo 3: Sintaxis Básica -->
+                <div class="bg-white rounded-lg shadow-lg p-6 border border-gray-200 text-center h-85">
+
+                    <img src="assets/img/3.png" alt="Sintaxis Básica" class="w-28 h-28 mx-auto mb-4">
+                    <h2 class="text-2xl font-bold mb-2">Sintaxis Básica</h2>
+                    <p class="text-gray-600 mb-6">HTML, CSS, JS</p>
+
+                    <button onclick="startQuiz('syntax')" class="w-full py-3 border-b-2 border-black font-semibold hover:bg-gray-100 transition flex items-center justify-center">
+                        Iniciar Quiz
+                    </button>
+
+                </div>
+
+            </div>
+        </main>
+
+        <!-- Footer de Progreso -->
+        <footer class="bg-black text-white py-6">
+
+            <div class="font-semibold text-center max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
+
+                <span>TU PROGRESO</span>
+                <span>Puntos: <strong id="total-points">0</strong></span>
+                <span>Módulos completados: <strong id="completed-modules">0/0</strong></span>
+
+            </div>
+
+        </footer>
+
+    </section>
+
+    <!-- PANTALLA 2: QUIZ / PREGUNTA -->
+    <section id="quiz-screen" class="hidden min-h-screen bg-white flex flex-col">
+
+        <div class="max-w-5xl mx-auto p-6 w-full flex flex-col flex-1">
+
+            <!-- Header -->
+            <header class="mb-16">
+
+                <div class="flex justify-between items-center mb-4">
+
+                    <h2 class="text-3xl font-bold">Pregunta <span id="current-question">1</span> de <span id="total-questions">10</span></h2>
+                    <button onclick="goHome()" class="text-3xl hover:text-gray-600 transition">🏠</button>
+                
+                </div>
+
+                <!-- Barra de Progreso -->
+                <div class="w-full bg-gray-200 rounded-full h-3">
+                    
+                    <div id="progress-bar" class="bg-black h-3 rounded-full transition-all duration-300" style="width: 10%"></div>
+               
+                </div>
+
+            </header>
+
+            <!-- Contenedor centrado -->
+            <div class="flex-1 flex flex-col items-center justify-center px-6">
+                <!-- Pregunta -->
+                <div class="bg-black text-white rounded-lg p-12 mb-16 text-center w-full max-w-3xl">
+
+                    <h3 id="question-text" class="text-3xl font-semibold">
+                        ¿Cuál es el comando para crear una rama en Git?
+                    </h3>
+
+                </div>
+
+                <!-- Opciones -->
+                <div class="space-y-6 mb-8 w-full max-w-3xl">
+
+                    <label class="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                        <input type="radio" name="answer" value="A" class="w-5 h-5 mr-4">
+                        <span class="text-lg">A) git branch nombre-rama</span>
+                    </label>
+
+                    <label class="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                        <input type="radio" name="answer" value="B" class="w-5 h-5 mr-4">
+                        <span class="text-lg">B) git checkout -b nombre-rama</span>
+                    </label>
+
+                    <label class="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                        <input type="radio" name="answer" value="C" class="w-5 h-5 mr-4">
+                        <span class="text-lg">C) git new-branch nombre-rama</span>
+                    </label>
+
+                    <label class="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                        <input type="radio" name="answer" value="D" class="w-5 h-5 mr-4">
+                        <span class="text-lg">D) Ambas A y B son correctas</span>
+                    </label>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Botón Siguiente -->
+        <div class="flex justify-end px-10 pb-12">
+
+            <button onclick="showFeedback()" class="bg-black text-white px-12 py-4 text-xl font-semibold rounded hover:bg-gray-800 transition">
+                Siguiente
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- PANTALLA 3: FEEDBACK -->
+    <section id="feedback-screen" class="hidden min-h-screen bg-white flex flex-col">
+
+        <div class="max-w-5xl mx-auto p-6 w-full flex flex-col flex-1">
+
+            <!-- Header -->
+            <header>
+
+                <div class="flex justify-between items-center mb-4">
+                    <div class="flex-1"></div>
+                    <h2 class="text-3xl font-bold flex-1 text-center">FEEDBACK</h2>
+                    <div class="flex-1 flex justify-end">
+                        <button onclick="goHome()" class="text-3xl hover:text-gray-600 transition">🏠</button>
+                    </div>
+                </div>
+                
+            </header>
+
+            <!-- Contenedor centrado -->
+            <div class="flex-1 flex flex-col items-center justify-center">
+
+                <!-- feedback -->
+                <div class="bg-black text-white rounded-lg p-10 text-center w-full max-w-4xl">
+
+                    <h3 id="feedback-title" class="text-3xl font-semibold mb-12">
+                        CORRECTO
+                    </h3>
+
+                    <p id="explanation-text" class="max-w-2xl text-xl leading-relaxed">
+                        Tanto 'git branch' como 'git checkout -b' crean una nueva rama. 
+                        La primera solo la crea, la segunda la crea y cambia a ella.
+                    </p>
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Botón Siguiente -->
+        <div class="absolute bottom-4 right-4">
+            <button onclick="nextQuestion()" class="bg-black text-white px-12 py-4 text-xl font-semibold rounded hover:bg-gray-800 transition">
+                Siguiente
+            </button>
+        </div>
+
+    </section>
+
+    <!-- PANTALLA 4: MÓDULO COMPLETADO -->
+    <section id="completed-screen" class="hidden min-h-screen bg-white flex flex-col">
+
+        <div class="max-w-4xl mx-auto p-6 text-center w-full flex-1">
+
+            <h2 class="text-4xl font-bold mb-12">MODULO COMPLETADO</h2>
+
+            <!-- Puntaje Final -->
+            <div class="bg-black text-white rounded-lg p-12 mb-12">
+
+                <h3 class="text-3xl font-bold mb-4">PUNTAJE FINAL</h3>
+                <p id="final-score" class="text-5xl font-bold">800 PUNTOS</p>
+
+            </div>
+
+            <!-- Estadísticas -->
+            <h3 class="text-3xl font-bold mb-12">ESTADISTICAS</h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+
+                <!-- Aciertos -->
+                <div class="text-center mb-8">
+                    <img src="assets/img/4.png" alt="aciertos" class="w-16 h-16 mx-auto mb-4">
+                    <p id="stats-correct" class="text-3xl font-bold">8/10</p>
+                </div>
+
+                <!-- Tiempo -->
+                <div class="text-center mb-8">
+                    <img src="assets/img/5.png" alt="tiempo" class="w-16 h-16 mx-auto mb-4">
+                    <p id="stats-time" class="text-3xl font-bold">12:34</p>
+                </div>
+
+                <!-- Racha -->
+                <div class="text-center">
+                    <img src="assets/img/6.png" alt="racha" class="w-16 h-16 mx-auto mb-4">
+                    <p id="stats-streak" class="text-3xl font-bold">3</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Botón Otro Módulo -->
+        <div class="flex justify-end px-10 pb-12">
+
+            <button onclick="goHome()" class="bg-black text-white px-12 py-4 text-xl font-semibold rounded hover:bg-gray-800 transition">
+                Otro Modulo
+            </button>
+
+        </div>
+
+    </section>
+</body>
+</html>
