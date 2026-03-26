@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TCS Skills - PWA</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> <!-- Agrega Tailwind CSS desde CDN -->
-    <script src="js/app.js"></script> <!-- Archivo JavaScript para la lógica de la aplicación -->
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="assets/icons/icon-192x192.png">
+    <title>TCS Skills</title>
+    <script src="https://cdn.tailwindcss.com"></script> <!-- Agrega Tailwind CSS desde CDN -->
+    <script src="js/app.js" defer></script> <!-- Archivo JavaScript para la lógica de la aplicación -->
     <link rel="manifest" href="manifest.json"> <!-- Archivo de manifiesto para PWA -->
 </head>
 <body class="bg-white min-h-screen">
@@ -19,6 +23,7 @@
             <h1 class="text-4xl font-bold mb-2">TCS SKILLS</h1><br>
             <p class="text-xl mb-6">¡Bienvenido, Practicante!</p>
             <p class="text-gray-300">Selecciona un tema para comenzar a practicar</p>
+            
 
         </header>
 
@@ -77,9 +82,8 @@
                 <span>TU PROGRESO</span>
                 <span>Puntos: <strong id="total-points">0</strong></span>
                 <span>Módulos completados: <strong id="completed-modules">0/0</strong></span>
-
             </div>
-
+            
         </footer>
 
     </section>
@@ -110,6 +114,12 @@
 
             <!-- Contenedor centrado -->
             <div class="flex-1 flex flex-col items-center justify-center px-6">
+                
+                <div id="loading-quiz" class="hidden text-center py-10">
+                    <div class="animate-spin rounded-full h-10 w-10 border-b-2 border-black mx-auto"></div>
+                    <p class="mt-4 text-gray-600">Cargando preguntas...</p>
+                </div>
+
                 <!-- Pregunta -->
                 <div class="bg-black text-white rounded-lg p-12 mb-16 text-center w-full max-w-3xl">
 
@@ -120,27 +130,7 @@
                 </div>
 
                 <!-- Opciones -->
-                <div class="space-y-6 mb-8 w-full max-w-3xl">
-
-                    <label class="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
-                        <input type="radio" name="answer" value="A" class="w-5 h-5 mr-4">
-                        <span class="text-lg">A) git branch nombre-rama</span>
-                    </label>
-
-                    <label class="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
-                        <input type="radio" name="answer" value="B" class="w-5 h-5 mr-4">
-                        <span class="text-lg">B) git checkout -b nombre-rama</span>
-                    </label>
-
-                    <label class="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
-                        <input type="radio" name="answer" value="C" class="w-5 h-5 mr-4">
-                        <span class="text-lg">C) git new-branch nombre-rama</span>
-                    </label>
-
-                    <label class="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
-                        <input type="radio" name="answer" value="D" class="w-5 h-5 mr-4">
-                        <span class="text-lg">D) Ambas A y B son correctas</span>
-                    </label>
+                <div class="space-y-6 mb-8 w-full max-w-3xl" id="options-container">
 
                 </div>
 
